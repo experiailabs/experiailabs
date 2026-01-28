@@ -1,10 +1,9 @@
-import { fileURLToPath, URL } from "url";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
-import { defineConfig } from "vite";
+import { fileURLToPath, URL } from "url";
 
-// Convert import.meta.url to __dirname equivalent
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
