@@ -1,17 +1,14 @@
-import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-import { defineConfig } from "vite";
-import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
-
-const plugins = [
-  react(),
-  tailwindcss(),
-  vitePluginManusRuntime(),
-];
+import tailwindcss from "@tailwindcss/vite"
+import react from "@vitejs/plugin-react"
+import path from "path"
+import { defineConfig } from "vite"
 
 export default defineConfig({
-  plugins,
+  base: "/",
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
 
   resolve: {
     alias: {
@@ -26,24 +23,7 @@ export default defineConfig({
   publicDir: path.resolve(import.meta.dirname, "client", "public"),
 
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
-  },
-
-  server: {
-    host: true,
-    allowedHosts: [
-      ".manuspre.computer",
-      ".manus.computer",
-      ".manus-asia.computer",
-      ".manuscomputer.ai",
-      ".manusvm.computer",
-      "localhost",
-      "127.0.0.1",
-    ],
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
-    },
-  },
-});
+  }
+})
