@@ -98,7 +98,7 @@ export default function Team() {
                     <img
                       src={`/images/${member.photo}`}
                       alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full  group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                   ) : (
