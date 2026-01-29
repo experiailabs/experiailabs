@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import StructuredData, { faqSchema } from '@/components/StructuredData';
 import { Mail, Phone, ArrowRight } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 /**
  * Contact Page - Dark Theme
@@ -18,20 +19,35 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
+    setLoading(true);
+    setError('');
+
+    try {
+      await emailjs.send(
+        'service_krhkgml',
+        'template_alxe497',
+        formData,
+        'jJaPC927BXF72gO2k'    
+      );
+      setSubmitted(true);
       setFormData({ name: '', email: '', company: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
+    } catch (err) {
+      console.error(err);
+      setError('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+      setTimeout(() => setSubmitted(false), 5000);
+    }
   };
 
   return (
@@ -100,6 +116,7 @@ export default function Contact() {
             <div className="p-8 bg-card border border-border rounded-sm">
               <h2 className="text-3xl font-bold font-mono text-foreground mb-8">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {error && <p className="text-red-500 font-semibold">{error}</p>}
                 <div>
                   <label className="block text-foreground font-semibold mb-2">Name</label>
                   <input
@@ -153,9 +170,11 @@ export default function Contact() {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="w-full neon-button inline-flex items-center justify-center gap-2"
                 >
-                  {submitted ? 'Message Sent! ✓' : 'Send Message'} <ArrowRight size={18} />
+                  {loading ? 'Sending...' : submitted ? 'Message Sent! ✓' : 'Send Message'}
+                  <ArrowRight size={18} />
                 </button>
               </form>
             </div>
@@ -165,45 +184,6 @@ export default function Contact() {
 
       {/* Divider */}
       <div className="section-divider"></div>
-
-      {/* FAQ Section */}
-      <section className="py-20 md:py-32 bg-card/30">
-        <div className="container max-w-3xl">
-          <h2 className="text-4xl font-bold font-mono text-foreground mb-12 text-center">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-6">
-            <div className="p-6 bg-card border border-border rounded-sm">
-              <h3 className="text-lg font-bold text-foreground mb-3">What industries do you serve?</h3>
-              <p className="text-muted-foreground">
-                We work across e-commerce, SaaS, media, hospitality, financial services, and entertainment. Our expertise in AI-driven personalization applies broadly to any industry focused on customer experience.
-              </p>
-            </div>
-
-            <div className="p-6 bg-card border border-border rounded-sm">
-              <h3 className="text-lg font-bold text-foreground mb-3">How long does a typical project take?</h3>
-              <p className="text-muted-foreground">
-                Project timelines vary based on scope and complexity. Discovery typically takes 2-4 weeks, followed by design and development phases. We'll provide a detailed timeline during our initial consultation.
-              </p>
-            </div>
-
-            <div className="p-6 bg-card border border-border rounded-sm">
-              <h3 className="text-lg font-bold text-foreground mb-3">Do you offer ongoing support?</h3>
-              <p className="text-muted-foreground">
-                Yes. We provide comprehensive support including monitoring, optimization, and continuous improvement. We can discuss support packages tailored to your needs.
-              </p>
-            </div>
-
-            <div className="p-6 bg-card border border-border rounded-sm">
-              <h3 className="text-lg font-bold text-foreground mb-3">How do you handle data privacy?</h3>
-              <p className="text-muted-foreground">
-                Privacy is paramount. We follow GDPR, CCPA, and other relevant regulations. All systems are designed with privacy-first principles and transparent data handling practices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

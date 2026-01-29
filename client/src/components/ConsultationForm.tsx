@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 /**
- * ConsultationForm Component - Dark Theme
- * Simple contact form for homepage consultation requests
- * Keywords: AI experience design, personalization at scale, intelligent automation, AI-driven customer experiences
+ * ConsultationForm Component - Dark Theme with EmailJS Integration
  */
 export default function ConsultationForm() {
   const [formData, setFormData] = useState({
@@ -26,18 +25,35 @@ export default function ConsultationForm() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Consultation form submitted:', formData);
-      setSubmitted(true);
-      setIsLoading(false);
+    // EmailJS parameters
+    const serviceID = 'service_krhkgml';
+    const templateID = 'template_alxe497';
+    const publicKey = 'jJaPC927BXF72gO2k';
 
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setFormData({ name: '', email: '', company: '', inquiry: '' });
-        setSubmitted(false);
-      }, 3000);
-    }, 1000);
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      company: formData.company,
+      inquiry: formData.inquiry,
+      message: `Consultation request from ${formData.name} (${formData.email}) at ${formData.company}. Interested in: ${formData.inquiry}`,
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then(() => {
+        setSubmitted(true);
+        setIsLoading(false);
+
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({ name: '', email: '', company: '', inquiry: '' });
+          setSubmitted(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        setIsLoading(false);
+        alert('Something went wrong. Please try again.');
+      });
   };
 
   return (
@@ -60,9 +76,7 @@ export default function ConsultationForm() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-sm md:text-base font-semibold text-foreground mb-2">
-                    Full Name
-                  </label>
+                  <label htmlFor="name" className="block text-sm md:text-base font-semibold text-foreground mb-2">Full Name</label>
                   <input
                     id="name"
                     type="text"
@@ -77,9 +91,7 @@ export default function ConsultationForm() {
 
                 {/* Email Field */}
                 <div>
-                  <label htmlFor="email" className="block text-sm md:text-base font-semibold text-foreground mb-2">
-                    Email Address
-                  </label>
+                  <label htmlFor="email" className="block text-sm md:text-base font-semibold text-foreground mb-2">Email Address</label>
                   <input
                     id="email"
                     type="email"
@@ -94,9 +106,7 @@ export default function ConsultationForm() {
 
                 {/* Company Field */}
                 <div>
-                  <label htmlFor="company" className="block text-sm md:text-base font-semibold text-foreground mb-2">
-                    Company
-                  </label>
+                  <label htmlFor="company" className="block text-sm md:text-base font-semibold text-foreground mb-2">Company</label>
                   <input
                     id="company"
                     type="text"
@@ -110,9 +120,7 @@ export default function ConsultationForm() {
 
                 {/* Inquiry Type */}
                 <div>
-                  <label htmlFor="inquiry" className="block text-sm md:text-base font-semibold text-foreground mb-2">
-                    What are you interested in?
-                  </label>
+                  <label htmlFor="inquiry" className="block text-sm md:text-base font-semibold text-foreground mb-2">What are you interested in?</label>
                   <select
                     id="inquiry"
                     name="inquiry"
@@ -137,16 +145,7 @@ export default function ConsultationForm() {
                   disabled={isLoading}
                   className="w-full neon-button inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isLoading ? (
-                    <>
-                      <span className="inline-block animate-spin">⚙️</span>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      Request Consultation <ArrowRight size={18} />
-                    </>
-                  )}
+                  {isLoading ? <>⚙️ Sending...</> : <>Request Consultation <ArrowRight size={18} /></>}
                 </button>
 
                 {/* Form Note */}
@@ -159,14 +158,9 @@ export default function ConsultationForm() {
                 <div className="flex justify-center mb-4">
                   <CheckCircle size={48} className="text-primary" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold font-mono text-foreground mb-2">
-                  Thank You!
-                </h3>
+                <h3 className="text-2xl md:text-3xl font-bold font-mono text-foreground mb-2">Thank You!</h3>
                 <p className="text-base md:text-lg text-muted-foreground mb-4">
-                  Your consultation request has been received. We'll be in touch shortly to discuss your <span className="text-accent font-semibold">AI experience design</span> and <span className="text-accent font-semibold">intelligent automation</span> needs.
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Redirecting you to our contact page...
+                  Your consultation request has been received. We'll be in touch shortly.
                 </p>
               </div>
             )}
