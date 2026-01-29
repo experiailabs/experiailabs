@@ -10,6 +10,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 
 
+
 import { useEffect } from 'react';  
 /**
  * Home Page - SEO-Optimized with AI Experience Design Keywords
@@ -25,13 +26,16 @@ export default function Home() {
   }, []);
   return (
     <div className="min-h-screen flex flex-col bg-background">
+
       <StructuredData schema={linkedinCompanySchema} />
       <StructuredData schema={serviceSchema} />
+      
       <Header />
       <Breadcrumb />
 
       {/* Hero Section */}
       <HeroSection />
+      
 
       {/* Divider */}
       <div className="section-divider"></div>
