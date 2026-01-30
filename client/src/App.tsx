@@ -12,11 +12,13 @@ import Team from "./pages/Team";
 import AIExperienceDesign from "./pages/AIExperienceDesign";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
+import IntroVideo from "./pages/IntroPage";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      <Route path="/" component={IntroVideo} />
+      <Route path="/Home" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/capabilities" component={Capabilities} />
       <Route path="/ventures" component={Ventures} />
