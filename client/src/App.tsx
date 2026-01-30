@@ -53,6 +53,7 @@ function Router() {
       <Route path="/ai-experience-design" component={AIExperienceDesign} />
       <Route path="/admin" component={Admin} />
       <Route path="/404" component={NotFound} />
+      <Route path="*" component={Home} />
       <Route component={NotFound} /> {/* catch-all */}
     </Switch>
   );
