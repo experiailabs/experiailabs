@@ -1,91 +1,78 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 
-const ONE_HOUR = 60 * 60 * 1000;
+const ONE_HOUR = 60 * 60 * 1000; // 1 hour in ms
 
 export default function IntroPage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [, setLocation] = useLocation();
-
   const [soundEnabled, setSoundEnabled] = useState(false);
-  const [checkedAudio, setCheckedAudio] = useState(false);
 
-  // ⏱ Skip intro if played recently
+  // ⏱ Check last played time
   useEffect(() => {
-    const last = localStorage.getItem("introPlayedA");
-    if (!last) return;
+    const lastPlayed = localStorage.getItem("introPlayed");
 
-    if (Date.now() - Number(last) < ONE_HOUR) {
-      setLocation("/home");
+    if (lastPlayed) {
+      const lastTime = parseInt(lastPlayed, 10);
+      const now = Date.now();
+
+      // If played within 1 hour → skip intro
+      if (now - lastTime < ONE_HOUR) {
+        setLocation("/home");
+        return;
+      }
     }
   }, [setLocation]);
 
-  // 🔊 Try auto-enable audio silently
+  // 🔊 Enable sound after first user interaction
   useEffect(() => {
-    const tryEnableAudio = async () => {
+    const enableSound = () => {
       const video = videoRef.current;
       if (!video) return;
 
-      try {
-        video.muted = false;
-        video.volume = 1;
+      video.muted = false;
+      video.volume = 1;
+      video.play().catch(() => {});
 
-        await video.play();
+      setSoundEnabled(true);
 
-        // ✅ Browser allowed audio
-        setSoundEnabled(true);
-      } catch {
-        // ❌ Browser blocked audio
-        video.muted = true;
-        setSoundEnabled(false);
-      }
-
-      setCheckedAudio(true);
+      window.removeEventListener("click", enableSound);
+      window.removeEventListener("touchstart", enableSound);
+      window.removeEventListener("keydown", enableSound);
     };
 
-    setTimeout(tryEnableAudio, 300);
+    window.addEventListener("click", enableSound);
+    window.addEventListener("touchstart", enableSound);
+    window.addEventListener("keydown", enableSound);
+
+    return () => {
+      window.removeEventListener("click", enableSound);
+      window.removeEventListener("touchstart", enableSound);
+      window.removeEventListener("keydown", enableSound);
+    };
   }, []);
 
+  // 🎬 When video ends
   const handleEnded = () => {
     localStorage.setItem("introPlayedAt", Date.now().toString());
     setLocation("/home");
   };
 
   return (
-    <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
-      <video
-        ref={videoRef}
-        src="/video/experiai.mp4"
-        autoPlay
-        muted={!soundEnabled}
-        playsInline
-        preload="auto"
-        onEnded={handleEnded}
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          background: "black",
-        }}
-      />
-
-      {/* 🔊 AUTO STATUS INDICATOR */}
-      {checkedAudio && (
-        <div
-          style={{
-            position: "absolute",
-            top: 20,
-            right: 20,
-            padding: "6px 12px",
-            borderRadius: 20,
-            background: "rgba(0,0,0,0.6)",
-            color: "#fff",
-            fontSize: 14,
-          }}
-        >
-          {soundEnabled ? "🔊 Sound On" : "🔇 Sound Off"}
-        </div>
-      )}
-    </div>
+    <video
+      ref={videoRef}
+      src="/video/experiai.mp4"
+      autoPlay
+      muted={!soundEnabled}
+      playsInline
+      preload="auto"
+      onEnded={handleEnded}
+      style={{
+        width: "100vw",
+        height: "100vh",
+        objectFit: "cover",
+        background: "black",
+      }}
+    />
   );
 }
