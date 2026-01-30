@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -13,12 +14,37 @@ import AIExperienceDesign from "./pages/AIExperienceDesign";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import IntroVideo from "./pages/IntroPage";
+
 function Router() {
-  // make sure to consider if you need authentication for certain routes
+  const [location, setLocation] = useLocation();
+
+  // SPA-safe redirect: If the URL path is unknown, send it to `/` (IntroVideo)
+  useEffect(() => {
+    const allowedPaths = [
+      "/",
+      "/home",
+      "/about",
+      "/capabilities",
+      "/ventures",
+      "/contact",
+      "/team",
+      "/ai-experience-design",
+      "/admin",
+      "/404",
+    ];
+
+    // Normalize case
+    const currentPath = location.toLowerCase();
+
+    if (!allowedPaths.includes(currentPath)) {
+      setLocation("/"); // redirect to IntroVideo
+    }
+  }, [location, setLocation]);
+
   return (
     <Switch>
       <Route path="/" component={IntroVideo} />
-      <Route path="/Home" component={Home} />
+      <Route path="/home" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/capabilities" component={Capabilities} />
       <Route path="/ventures" component={Ventures} />
@@ -27,9 +53,8 @@ function Router() {
       <Route path="/ai-experience-design" component={AIExperienceDesign} />
       <Route path="/admin" component={Admin} />
       <Route path="/404" component={NotFound} />
-      <Route component={NotFound} />
+      <Route component={NotFound} /> {/* catch-all */}
     </Switch>
-
   );
 }
 
