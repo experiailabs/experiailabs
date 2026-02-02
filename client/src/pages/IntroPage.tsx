@@ -1,30 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 
-const ONE_HOUR = 60 * 60 * 1000; // 1 hour in ms
+const ONE_HOUR = 60 * 60 * 1000;
 
 export default function IntroPage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [, setLocation] = useLocation();
   const [soundEnabled, setSoundEnabled] = useState(false);
 
-  // ⏱ Check last played time
+  // ⏱ Skip intro if played within 1 hour
   useEffect(() => {
-    const lastPlayed = localStorage.getItem("introPlayed");
+    const lastPlayed = localStorage.getItem("introPlayedAt");
 
     if (lastPlayed) {
       const lastTime = parseInt(lastPlayed, 10);
-      const now = Date.now();
-
-      // If played within 1 hour → skip intro
-      if (now - lastTime < ONE_HOUR) {
+      if (Date.now() - lastTime < ONE_HOUR) {
         setLocation("/home");
-        return;
       }
     }
   }, [setLocation]);
 
-  // 🔊 Enable sound after first user interaction
+  // 🔊 Enable sound on first interaction
   useEffect(() => {
     const enableSound = () => {
       const video = videoRef.current;
@@ -33,7 +29,6 @@ export default function IntroPage() {
       video.muted = false;
       video.volume = 1;
       video.play().catch(() => {});
-
       setSoundEnabled(true);
 
       window.removeEventListener("click", enableSound);
@@ -52,27 +47,38 @@ export default function IntroPage() {
     };
   }, []);
 
-  // 🎬 When video ends
   const handleEnded = () => {
     localStorage.setItem("introPlayedAt", Date.now().toString());
     setLocation("/home");
   };
 
   return (
-    <video
-      ref={videoRef}
-      src="/video/experiai.mp4"
-      autoPlay
-      muted={!soundEnabled}
-      playsInline
-      preload="auto"
-      onEnded={handleEnded}
+    <div
       style={{
-        width: "100vw",
-        height: "100vh",
-        objectFit: "cover",
-        background: "black",
+        width: "100%",
+        minHeight: "100vh",
+        backgroundColor: "#ffffff",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        overflow: "hidden",
       }}
-    />
+    >
+      <video
+        ref={videoRef}
+        src="/video/experiai.mp4"
+        autoPlay
+        muted={!soundEnabled}
+        playsInline
+        preload="auto"
+        onEnded={handleEnded}
+        style={{
+          width: "100%",
+          height: "auto",
+          maxHeight: "100vh",
+          objectFit: "contain",
+        }}
+      />
+    </div>
   );
 }
