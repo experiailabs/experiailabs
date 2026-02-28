@@ -106,7 +106,7 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Location</h3>
               <p className="text-muted-foreground">
-                RAKEZ Business Zone, Al Nakheel Area, P.O. Box No. 10055, Ras Al Khaimah, United Arab Emirates.
+                Compass building - Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
               </p>
             </div>
           </div>
