@@ -37,7 +37,7 @@ export default function Contact() {
         'service_krhkgml',
         'template_alxe497',
         formData,
-        'jJaPC927BXF72gO2k'    
+        'jJaPC927BXF72gO2k'
       );
       setSubmitted(true);
       setFormData({ name: '', email: '', company: '', message: '' });
@@ -106,7 +106,12 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Location</h3>
               <p className="text-muted-foreground">
-                Compass building - Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
+                Dubai office - Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
+              </p>  <br />
+              <p className="text-muted-foreground">
+                India office - New Delhi, India
+                D134, Opposite kairali health Centre,
+                Meharauli, New Delhi 110030
               </p>
             </div>
           </div>
