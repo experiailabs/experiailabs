@@ -110,7 +110,7 @@ export default function Contact() {
               </p>  <br />
               <p className="text-muted-foreground">
                 India office - New Delhi, India
-                D134, Opposite kairali health Centre,
+                D134, Opposite Kairali Health Centre,
                 Meharauli, New Delhi 110030
               </p>
             </div>
