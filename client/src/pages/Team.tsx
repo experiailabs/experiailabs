@@ -48,10 +48,10 @@ const teamData = [
     linkedin: "https://www.linkedin.com/in/nikita-abrol-519013134/"
   },
   {
-    name: "Akrity Chetri",
+    name: "Dixha Mehta",
     designation: "AGM - Digital Marketing",
-    photo: "team-akrity.png",
-    linkedin: "https://www.linkedin.com/in/monisha-chetri-72785a172/"
+    photo: "team-diksha.png",
+    linkedin: "https://www.linkedin.com/in/diksha-mehta-5641ba150/"
   },
   {
     name: "Gopal Jha",
