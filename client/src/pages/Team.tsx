@@ -57,7 +57,7 @@ const teamData = [
     name: "Gopal Jha",
     designation: "AGM - Budgets & Controls",
     photo: "team-gopal.png",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/gopal-jha-045659154/"
   }
 ];
 
