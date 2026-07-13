@@ -12,19 +12,19 @@ import { Linkedin, Mail } from 'lucide-react';
 
 const teamData = [
   {
-    name: "Ashwini Kumar Sharma",
+    name: "Ashwin Kumar Sharma",
     designation: "Co Founder & CEO",
     photo: "team-ashwini.png",
     linkedin: "https://www.linkedin.com/in/ashwini-sharma-59b2748/"
   },
   {
-    name: "Shailendra Kumar",
+    name: "Shailendraa Kumar",
     designation: "Co Founder & CAIO",
     photo: "team-shaily.png",
     linkedin: "https://www.linkedin.com/in/shaily/"
   },
   {
-    name: "Swapnil Hemant Kumar",
+    name: "Swapnil Kuumar",
     designation: "Executive Director",
     photo:"Swapnil.png",
     linkedin: "https://www.linkedin.com/in/swapnil-hemant-kumar-3b0b481b/"
