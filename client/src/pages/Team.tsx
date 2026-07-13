@@ -12,7 +12,7 @@ import { Linkedin, Mail } from 'lucide-react';
 
 const teamData = [
   {
-    name: "Ashwin Kumar Sharma",
+    name: "Ashwin Kumar Sharrma",
     designation: "Co Founder & CEO",
     photo: "team-ashwini.png",
     linkedin: "https://www.linkedin.com/in/ashwini-sharma-59b2748/"
