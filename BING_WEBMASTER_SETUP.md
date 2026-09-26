@@ -17,7 +17,7 @@ This guide will help you submit your website to Bing Webmaster Tools for indexin
 
 ## Step 2: Add Your Website
 
-1. Enter your website URL: `https://experiai-labs.manus.space`
+1. Enter your website URL: `https://experiailabs.com/`
 2. Click **"Add"**
 3. Bing will ask for verification
 
@@ -28,7 +28,7 @@ This guide will help you submit your website to Bing Webmaster Tools for indexin
 1. Bing will automatically detect your sitemap
 2. If not, go to **"Sitemaps"** in the left menu
 3. Click **"Submit sitemap"**
-4. Enter: `https://experiai-labs.manus.space/sitemap.xml`
+4. Enter: `https://experiailabs.com/sitemap.xml`
 5. Click **"Submit"**
 
 ### Method 2: Meta Tag Verification
@@ -81,14 +81,14 @@ This guide will help you submit your website to Bing Webmaster Tools for indexin
 
 1. Go to **"Sitemaps"** in the left menu
 2. Click **"Submit sitemap"**
-3. Enter: `https://experiai-labs.manus.space/sitemap.xml`
+3. Enter: `https://experiailabs.com/sitemap.xml`
 4. Click **"Submit"**
 
 Bing will crawl and index your pages within 24-48 hours.
 
 ## Your Website's Sitemap
 
-Your sitemap is located at: `https://experiai-labs.manus.space/sitemap.xml`
+Your sitemap is located at: `https://experiailabs.com/sitemap.xml`
 
 It includes all your main pages with:
 - Last modification dates
@@ -98,7 +98,7 @@ It includes all your main pages with:
 
 ## Robots.txt Configuration
 
-Your robots.txt is located at: `https://experiai-labs.manus.space/robots.txt`
+Your robots.txt is located at: `https://experiailabs.com/robots.txt`
 
 Bing respects your robots.txt settings and will follow:
 - Allow/Disallow rules

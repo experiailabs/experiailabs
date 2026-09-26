@@ -19,7 +19,7 @@ This guide will help you submit your website to Google Search Console and get yo
 ### Option A: Using Manus Domain (Recommended for Quick Start)
 
 1. Select **"URL prefix"** property type
-2. Enter your Manus URL: `https://experiai-labs.manus.space`
+2. Enter your Manus URL: `https://experiailabs.com/`
 3. Click **"Continue"**
 4. Google will show verification options
 
@@ -52,14 +52,14 @@ This guide will help you submit your website to Google Search Console and get yo
 
 1. Once verified, you'll be taken to your Search Console dashboard
 2. In the left sidebar, click **"Sitemaps"**
-3. Enter your sitemap URL: `https://experiai-labs.manus.space/sitemap.xml`
+3. Enter your sitemap URL: `https://experiailabs.com/sitemap.xml`
 4. Click **"Submit"**
 5. Google will crawl and index your pages
 
 ## Step 5: Request Indexing (Optional but Recommended)
 
 1. Go to **"URL Inspection"** in the left sidebar
-2. Enter your home page URL: `https://experiai-labs.manus.space/`
+2. Enter your home page URL: `https://experiailabs.com/`
 3. Click the **"Request Indexing"** button
 4. Repeat for key pages:
    - `/about`
@@ -100,7 +100,7 @@ For additional search engine visibility, also submit to Bing:
 
 ## Your Website's Sitemap
 
-Your sitemap is located at: `https://experiai-labs.manus.space/sitemap.xml`
+Your sitemap is located at: `https://experiailabs.com/sitemap.xml`
 
 It includes:
 - **Home Page** (Priority: 1.0) - Updated weekly
@@ -117,7 +117,7 @@ All pages include:
 
 ## Robots.txt Configuration
 
-Your robots.txt file is located at: `https://experiai-labs.manus.space/robots.txt`
+Your robots.txt file is located at: `https://experiailabs.com/robots.txt`
 
 It currently:
 - Allows all search engines to crawl your site

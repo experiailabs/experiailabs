@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "npm run build",
+  "outputDirectory": "client/dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "experiailabs.com"
+        }
+      ],
+      "destination": "https://www.experiailabs.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/capabilities",
+      "destination": "/capabilities/index.html"
+    },
+    {
+      "source": "/ventures",
+      "destination": "/ventures/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/team",
+      "destination": "/team/index.html"
+    },
+    {
+      "source": "/ai-experience-design",
+      "destination": "/ai-experience-design/index.html"
+    },
+    {
+      "source": "/government-services",
+      "destination": "/government-services/index.html"
+    },
+    {
+      "source": "/404",
+      "destination": "/404/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/404/index.html"
+    }
+  ]
+}

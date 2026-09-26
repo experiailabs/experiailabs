@@ -1,19 +1,6 @@
-# ExperiAI Labs - Robots.txt
-# This file tells search engines how to crawl and index the website
-
-# Allow all search engines
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /404
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Specify sitemap location for better indexing
-Sitemap: https://experiai-labs.manus.space/sitemap.xml
-
-# Crawl delay (optional - time in seconds between requests)
-# Crawl-delay: 1
-
-# Request rate (optional - pages per second)
-# Request-rate: 1/1s
+Sitemap: https://www.experiailabs.com/sitemap.xml

@@ -63,7 +63,7 @@ export default function Contact() {
             Get in <span className="text-primary">Touch</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl">
-            Ready to implement <span className="text-accent font-semibold">AI experience design</span>, <span className="text-accent font-semibold">personalization at scale</span>, or <span className="text-accent font-semibold">intelligent automation</span>? Let's discuss how we can create transformative <span className="text-accent font-semibold">AI-driven customer experiences</span> for your business.
+            Ready to implement AI experience design, personalisation at scale, or intelligent automation? Let's discuss how we can create transformative AI-driven customer experiences for your business.
           </p>
         </div>
       </section>
@@ -92,11 +92,14 @@ export default function Contact() {
               <div className="w-12 h-12 bg-accent rounded-sm mb-6 flex items-center justify-center">
                 <Phone size={24} className="text-background" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Phone</h3>
-              <p className="text-muted-foreground mb-4">Schedule a call to discuss your vision.</p>
-              <p className="text-accent font-semibold">
-                Available on Request
-              </p>
+              <h3 className="text-xl font-bold text-foreground mb-2">Phone & WhatsApp</h3>
+              <p className="text-muted-foreground mb-4">Call or message us to discuss your vision.</p>
+              <a href="tel:+918178329362" className="block text-primary hover:text-accent transition-colors font-semibold">
+                +91 81783 29362
+              </a>
+              <a href="https://wa.me/918178329362" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-primary hover:text-accent transition-colors font-semibold underline underline-offset-4">
+                Message on WhatsApp
+              </a>
             </div>
 
             {/* Location */}
@@ -106,7 +109,7 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Location</h3>
               <p className="text-muted-foreground">
-                Dubai office - Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
+                Ras Al Khaimah office - Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates
               </p>  <br />
               <p className="text-muted-foreground">
                 India office - New Delhi, India

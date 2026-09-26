@@ -5,7 +5,7 @@ import CountUp from './CountUp';
 
 /**
  * Hero Section Component - Animated with geometric shapes and neon effects
- * SEO-optimized with target keywords: AI experience design, personalization at scale, intelligent automation
+ * SEO-optimized with target keywords: AI experience design, personalisation at scale, intelligent automation
  */
 export default function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -98,7 +98,7 @@ export default function HeroSection() {
 
           {/* Subheading with Keywords */}
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed max-w-2xl">
-            We specialize in <span className="text-accent font-semibold">AI experience design</span> and <span className="text-accent font-semibold">personalization at scale</span>. Our <span className="text-accent font-semibold">intelligent automation</span> solutions embed AI-driven innovation into every customer touchpoint, delivering <span className="text-accent font-semibold">AI-driven customer experiences</span> that captivate users and drive measurable business results.
+            We specialize in AI experience design and personalisation at scale. Our intelligent automation solutions embed AI-driven innovation into every customer touchpoint, delivering AI-driven customer experiences that captivate users and drive measurable business results.
           </p>
 
           {/* Key Metrics */}

@@ -75,7 +75,7 @@ export default function Team() {
             Meet Our <span className="text-primary">Leadership Team</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl">
-            Visionary leaders driving <span className="text-accent font-semibold">AI experience innovation</span> and <span className="text-accent font-semibold">personalization at scale</span> across global markets. Our team combines deep industry expertise with cutting-edge AI capabilities.
+            Visionary leaders driving AI experience innovation and personalisation at scale across global markets. Our team combines deep industry expertise with cutting-edge AI capabilities.
           </p>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function Team() {
             {[
               {
                 title: "Innovation First",
-                description: "We push boundaries in AI experience design and personalization at scale, constantly exploring new possibilities."
+                description: "We push boundaries in AI experience design and personalisation at scale, constantly exploring new possibilities."
               },
               {
                 title: "Client Success",
@@ -217,7 +217,7 @@ export default function Team() {
             Join Our Mission
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We're building the future of <span className="text-accent font-semibold">AI experience design</span> and <span className="text-accent font-semibold">intelligent automation</span>. If you're passionate about innovation, we'd love to hear from you.
+            We're building the future of AI experience design and intelligent automation. If you're passionate about innovation, we'd love to hear from you.
           </p>
           <a href="/contact" className="neon-button inline-flex items-center gap-2">
             Get In Touch <Mail size={18} />

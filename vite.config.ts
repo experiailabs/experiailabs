@@ -5,7 +5,7 @@ import path from "path";
 
 export default defineConfig({
   root: "client",  // relative source folder
-  base: "./",      // relative paths in build
+  base: "/",      // relative paths in build
   plugins: [react(), tailwindcss()],
   publicDir: "public", // relative to root (client)
   build: {

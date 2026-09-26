@@ -136,7 +136,7 @@ ls -lh dist/
 
 ### 1. Google PageSpeed Insights
 - Visit: https://pagespeed.web.dev/
-- Enter: https://experiai-labs.manus.space
+- Enter: https://experiailabs.com/
 - Monitor Core Web Vitals scores
 
 ### 2. Google Search Console

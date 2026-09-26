@@ -66,7 +66,7 @@
   --secondary: #2a2a2a;
   --secondary-foreground: #e8d4b8;  /* Light warm tan */
   --muted: #3a3a3a;
-  --muted-foreground: #d4a574;  /* Warm tan/beige */
+  --muted-foreground: #cbd0da;  /* Warm tan/beige */
   --accent: #FF9F1C;  /* Saffron accent */
   --accent-foreground: #1a1a1a;
   --destructive: #FF006E;
@@ -178,4 +178,16 @@
       max-width: 1280px;
     }
   }
+}
+
+/* Readable prose; monospace remains reserved for headings and code. */
+body { font-family: "Sora", system-ui, sans-serif; font-size: 18px; line-height: 1.7; }
+h1, h2, h3, h4, h5, h6 { font-family: "IBM Plex Mono", monospace; }
+p, li, label, input, textarea, select { font-family: "Sora", system-ui, sans-serif; }
+section p, section li, footer p { font-size: clamp(17px, 1.1vw, 18px); line-height: 1.75; }
+p > span.text-accent.font-semibold { color: inherit; font-weight: inherit; }
+/* Static HTML stays visible before scripts initialise animations. */
+html:not(.aos-ready) [data-aos] { opacity: 1 !important; transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
 }

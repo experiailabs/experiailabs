@@ -21,7 +21,7 @@ export const sillySuitcaseSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Silly Suitcase",
-  "description": "AI-powered travel guide that transforms how people discover and plan city breaks using intelligent content personalization and AI-driven customer experiences.",
+  "description": "AI-powered travel guide that transforms how people discover and plan city breaks using intelligent content personalisation and AI-driven customer experiences.",
   "url": "https://sillysuitcase.com",
   "applicationCategory": "TravelApplication",
   "offers": {
@@ -30,30 +30,23 @@ export const sillySuitcaseSchema = {
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "10000",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "author": {
     "@type": "Organization",
     "name": "ExperiAI Labs",
-    "url": "https://experiai-labs.com"
+    "url": "https://www.experiailabs.com"
   },
-  "image": "https://experiai-labs.com/images/travel-abstract.png",
-  "screenshot": "https://experiai-labs.com/images/travel-abstract.png",
+  "image": "https://www.experiailabs.com/images/travel-abstract.png",
+  "screenshot": "https://www.experiailabs.com/images/travel-abstract.png",
   "operatingSystem": "Web",
-  "inLanguage": "en-US",
-  "keywords": "AI travel guide, personalization at scale, intelligent automation, AI-driven customer experience"
+  "inLanguage": "en-AU",
+  "keywords": "AI travel guide, personalisation at scale, intelligent automation, AI-driven customer experience"
 };
 
 export const synapseSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Synapse",
-  "description": "Next-generation nightclub experience powered by AI. Reimagines entertainment by creating immersive, personalized moments for every guest with intelligent music curation and adaptive lighting.",
+  "description": "Next-generation nightclub experience powered by AI. Reimagines entertainment by creating immersive, personalised moments for every guest with intelligent music curation and adaptive lighting.",
   "url": "https://synapseclub-wxgjwnyt.manus.space",
   "applicationCategory": "EntertainmentApplication",
   "offers": {
@@ -62,23 +55,16 @@ export const synapseSchema = {
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "5000",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "author": {
     "@type": "Organization",
     "name": "ExperiAI Labs",
-    "url": "https://experiai-labs.com"
+    "url": "https://www.experiailabs.com"
   },
-  "image": "https://experiai-labs.com/images/synapse-hero.png",
-  "screenshot": "https://experiai-labs.com/images/synapse-hero.png",
+  "image": "https://www.experiailabs.com/images/synapse-hero.png",
+  "screenshot": "https://www.experiailabs.com/images/synapse-hero.png",
   "operatingSystem": "Web",
-  "inLanguage": "en-US",
-  "keywords": "AI nightclub, personalization at scale, intelligent automation, AI-driven customer experience"
+  "inLanguage": "en-AU",
+  "keywords": "AI nightclub, personalisation at scale, intelligent automation, AI-driven customer experience"
 };
 
 // FAQ Schema for Contact Page
@@ -91,7 +77,7 @@ export const faqSchema = {
       "name": "What industries do you serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We work across e-commerce, SaaS, media, hospitality, financial services, and entertainment. Our expertise in AI experience design and intelligent automation applies broadly to any industry focused on customer experience and personalization at scale."
+        "text": "We work across e-commerce, SaaS, media, hospitality, financial services, and entertainment. Our expertise in AI experience design and intelligent automation applies broadly to any industry focused on customer experience and personalisation at scale."
       }
     },
     {
@@ -115,7 +101,7 @@ export const faqSchema = {
       "name": "How do you handle data privacy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Privacy is paramount. We follow GDPR, CCPA, and other relevant regulations. All systems are designed with privacy-first principles and transparent data handling practices for personalization at scale."
+        "text": "Privacy is paramount. We follow GDPR, CCPA, and other relevant regulations. All systems are designed with privacy-first principles and transparent data handling practices for personalisation at scale."
       }
     }
   ]
@@ -126,26 +112,26 @@ export const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "AI Experience Design & Intelligent Automation",
-  "description": "We specialize in AI experience design, personalization at scale, and intelligent automation solutions that create transformative AI-driven customer experiences.",
+  "description": "We specialize in AI experience design, personalisation at scale, and intelligent automation solutions that create transformative AI-driven customer experiences.",
   "provider": {
     "@type": "Organization",
     "name": "ExperiAI Labs",
-    "url": "https://experiai-labs.com",
-    "logo": "https://experiai-labs.com/logo.png",
+    "url": "https://www.experiailabs.com",
+    "logo": "https://www.experiailabs.com/logo.png",
     "sameAs": [
       "https://linkedin.com/company/experiai-labs"
     ],
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "AE",
-      "addressLocality": "Dubai"
+      "addressLocality": "Ras Al Khaimah"
     }
   },
   "areaServed": [
     "AE", "SA", "AU", "UZ", "GE", "LV", "AM", "BT", "NP"
   ],
-  "serviceType": "AI Experience Design, Personalization at Scale, Intelligent Automation",
-  "image": "https://experiai-labs.com/images/hero-abstract.png"
+  "serviceType": "AI Experience Design, Personalisation at Scale, Intelligent Automation",
+  "image": "https://www.experiailabs.com/images/hero-abstract.png"
 };
 
 // FAQ Schema for AI Experience Design Pillar Page
@@ -158,15 +144,15 @@ export const aiExperienceDesignFaqSchema = {
       "name": "What is AI experience design and how does it differ from traditional UX design?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI experience design is the practice of creating intelligent, adaptive interfaces that leverage artificial intelligence to deliver personalized, contextually relevant experiences. Unlike traditional UX design which focuses on static interfaces and predetermined user flows, AI experience design creates dynamic systems that learn from user behavior, adapt in real-time, and anticipate needs before users articulate them. This approach enables personalization at scale—delivering unique experiences to millions of users simultaneously."
+        "text": "AI experience design is the practice of creating intelligent, adaptive interfaces that leverage artificial intelligence to deliver personalised, contextually relevant experiences. Unlike traditional UX design which focuses on static interfaces and predetermined user flows, AI experience design creates dynamic systems that learn from user behavior, adapt in real-time, and anticipate needs before users articulate them. This approach enables personalisation at scale—delivering unique experiences to millions of users simultaneously."
       }
     },
     {
       "@type": "Question",
-      "name": "How can businesses achieve personalization at scale without overwhelming their teams?",
+      "name": "How can businesses achieve personalisation at scale without overwhelming their teams?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Personalization at scale is achieved through intelligent automation and machine learning systems that learn from user behavior and adapt experiences automatically. Rather than requiring manual personalization for each user, AI systems analyze behavioral signals, contextual information, and predictive analytics to deliver the right content at the right time through the right channel. This enables organizations to deliver hyper-personalized experiences to millions of users simultaneously without proportionally increasing team size or complexity."
+        "text": "Personalisation at scale is achieved through intelligent automation and machine learning systems that learn from user behavior and adapt experiences automatically. Rather than requiring manual personalisation for each user, AI systems analyze behavioral signals, contextual information, and predictive analytics to deliver the right content at the right time through the right channel. This enables organizations to deliver hyper-personalised experiences to millions of users simultaneously without proportionally increasing team size or complexity."
       }
     },
     {
@@ -190,7 +176,7 @@ export const aiExperienceDesignFaqSchema = {
       "name": "How should organizations measure the ROI of AI experience design investments?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The ultimate measure of AI experience design success is business impact. Key metrics to track include: conversion rate improvements (typically 15-30%), customer lifetime value increases (20-40%), engagement rate improvements (25-50%), customer satisfaction gains (10-20%), operational efficiency improvements (30-50%), and time to value reduction (40-60%). Organizations should establish baseline metrics before implementation, measure results rigorously during pilots, and scale successful initiatives across more users and channels while maintaining quality and personalization."
+        "text": "The ultimate measure of AI experience design success is business impact. Key metrics to track include: conversion rate improvements (typically 15-30%), customer lifetime value increases (20-40%), engagement rate improvements (25-50%), customer satisfaction gains (10-20%), operational efficiency improvements (30-50%), and time to value reduction (40-60%). Organizations should establish baseline metrics before implementation, measure results rigorously during pilots, and scale successful initiatives across more users and channels while maintaining quality and personalisation."
       }
     }
   ]
@@ -201,20 +187,21 @@ export const linkedinCompanySchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "ExperiAI Labs",
-  "url": "https://experiai-labs.com",
-  "logo": "https://experiai-labs.com/logo.png",
-  "description": "ExperiAI Labs specializes in AI experience design, personalization at scale, and intelligent automation solutions. We create transformative AI-driven customer experiences for enterprises across UAE, Saudi Arabia, Australia, and emerging markets.",
+  "url": "https://www.experiailabs.com",
+  "logo": "https://www.experiailabs.com/logo.png",
+  "description": "ExperiAI Labs specializes in AI experience design, personalisation at scale, and intelligent automation solutions. We create transformative AI-driven customer experiences for enterprises across UAE, Saudi Arabia, Australia, and emerging markets.",
   "foundingDate": "2024",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Customer Service",
+    "telephone": "+918178329362",
     "email": "shaily@experiailabs.com",
     "availableLanguage": ["en"]
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Dubai",
-    "addressLocality": "Dubai",
+    "streetAddress": "Al Hulaila, Al Hulaila Industrial Zone-FZ",
+    "addressLocality": "Ras Al Khaimah",
     "addressCountry": "AE",
     "postalCode": "00000"
   },
@@ -263,7 +250,7 @@ export const linkedinCompanySchema = {
   ],
   "knowsAbout": [
     "AI Experience Design",
-    "Personalization at Scale",
+    "Personalisation at Scale",
     "Intelligent Automation",
     "AI-Driven Customer Experiences",
     "Machine Learning",
@@ -282,14 +269,7 @@ export const linkedinCompanySchema = {
     "description": "Designing Intelligent Experiences at Scale"
   },
   "slogan": "Designing Intelligent Experiences at Scale",
-  "image": "https://experiai-labs.com/images/hero-abstract.png",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "50",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
+  "image": "https://www.experiailabs.com/images/hero-abstract.png"
 };
 
 // Product Schema for Ventures
@@ -297,23 +277,18 @@ export const venturesSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "ExperiAI Labs Ventures",
-  "description": "Showcase of AI-powered ventures demonstrating AI experience design, personalization at scale, and intelligent automation in real-world applications.",
-  "url": "https://experiai-labs.com/ventures",
+  "description": "Showcase of AI-powered ventures demonstrating AI experience design, personalisation at scale, and intelligent automation in real-world applications.",
+  "url": "https://www.experiailabs.com/ventures",
   "mainEntity": [
     {
       "@type": "Product",
       "name": "Silly Suitcase",
-      "description": "AI-powered travel guide demonstrating personalization at scale and intelligent automation for travel planning.",
+      "description": "AI-powered travel guide demonstrating personalisation at scale and intelligent automation for travel planning.",
       "url": "https://sillysuitcase.com",
-      "image": "https://experiai-labs.com/images/travel-abstract.png",
+      "image": "https://www.experiailabs.com/images/travel-abstract.png",
       "brand": {
         "@type": "Brand",
         "name": "ExperiAI Labs"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "10000"
       }
     },
     {
@@ -321,15 +296,10 @@ export const venturesSchema = {
       "name": "Synapse",
       "description": "AI-powered nightclub experience showcasing intelligent automation and AI-driven customer experiences in entertainment.",
       "url": "https://synapseclub-wxgjwnyt.manus.space",
-      "image": "https://experiai-labs.com/images/synapse-hero.png",
+      "image": "https://www.experiailabs.com/images/synapse-hero.png",
       "brand": {
         "@type": "Brand",
         "name": "ExperiAI Labs"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "5000"
       }
     }
   ]

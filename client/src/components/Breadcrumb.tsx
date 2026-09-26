@@ -45,7 +45,7 @@ export default function Breadcrumb() {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      item: `https://experiai-labs.manus.space${item.href}`,
+      item: `https://www.experiailabs.com${item.href}`,
     })),
   };
 

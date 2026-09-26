@@ -66,7 +66,7 @@ export default function ConsultationForm() {
               Ready to Transform Your <span className="text-primary">Customer Experience</span>?
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
-              Request a consultation with our team to explore how <span className="text-accent font-semibold">AI experience design</span>, <span className="text-accent font-semibold">personalization at scale</span>, and <span className="text-accent font-semibold">intelligent automation</span> can drive growth for your business.
+              Request a consultation with our team to explore how service design, tailored journeys, and workflow automation can drive growth for your business.
             </p>
           </div>
 
@@ -131,7 +131,7 @@ export default function ConsultationForm() {
                   >
                     <option value="">Select an option</option>
                     <option value="ai-experience-design">AI Experience Design</option>
-                    <option value="personalization">Personalization at Scale</option>
+                    <option value="personalization">Tailored Experiences</option>
                     <option value="intelligent-automation">Intelligent Automation</option>
                     <option value="ai-driven-experiences">AI-Driven Customer Experiences</option>
                     <option value="partnership">Partnership Opportunity</option>
