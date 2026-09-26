@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +15,7 @@ import GovernmentPublicServices from "./pages/GovernmentPublicServices";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
+import IntroPage from "./pages/IntroPage";
 
 const SITE_URL = "https://www.experiailabs.com";
 
@@ -83,20 +83,11 @@ const fallbackSeo = {
   noindex: true,
 };
 
-/** Redirects /home (and any legacy path) to / so there's one canonical homepage. */
-function RedirectTo({ to }: { to: string }) {
-  const [, setLocation] = useLocation();
-  useEffect(() => {
-    setLocation(to, { replace: true });
-  }, [to, setLocation]);
-  return null;
-}
-
 function Router() {
-  const [location, setLocation] = useLocation();
+  const [location] = useLocation();
   const currentPath = location.toLowerCase();
 
-  const seo = seoByPath[currentPath] ?? fallbackSeo;
+  const seo = seoByPath[currentPath === "/home" ? "/" : currentPath] ?? fallbackSeo;
 
   return (
     <>
@@ -108,10 +99,8 @@ function Router() {
       />
 
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/home">
-          <RedirectTo to="/" />
-        </Route>
+        <Route path="/" component={IntroPage} />
+        <Route path="/home" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/capabilities" component={Capabilities} />
         <Route path="/ventures" component={Ventures} />

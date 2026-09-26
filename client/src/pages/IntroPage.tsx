@@ -1,24 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 
-const ONE_HOUR = 60 * 60 * 1000;
-
 export default function IntroPage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [, setLocation] = useLocation();
   const [soundEnabled, setSoundEnabled] = useState(false);
-
-  // ⏱ Skip intro if played within 1 hour
-  useEffect(() => {
-    const lastPlayed = localStorage.getItem("introPlayedAt");
-
-    if (lastPlayed) {
-      const lastTime = parseInt(lastPlayed, 10);
-      if (Date.now() - lastTime < ONE_HOUR) {
-        setLocation("/home");
-      }
-    }
-  }, [setLocation]);
 
   // 🔊 Enable sound on first interaction
   useEffect(() => {
@@ -48,13 +34,13 @@ export default function IntroPage() {
   }, []);
 
   const handleEnded = () => {
-    localStorage.setItem("introPlayedAt", Date.now().toString());
-    setLocation("/home");
+    setLocation("/home", { replace: true });
   };
 
   return (
     <div
       style={{
+        position: "relative",
         width: "100%",
         minHeight: "100vh",
         backgroundColor: "#ffffff",
@@ -64,9 +50,12 @@ export default function IntroPage() {
         overflow: "hidden",
       }}
     >
+      <h1 className="sr-only">Welcome to ExperiAI Labs</h1>
       <video
         ref={videoRef}
         src="/video/experiai.mp4"
+        controls
+        aria-label="ExperiAI Labs introduction"
         autoPlay
         muted={!soundEnabled}
         playsInline
@@ -79,6 +68,9 @@ export default function IntroPage() {
           objectFit: "contain",
         }}
       />
+      <a href="/home" className="absolute top-6 right-6 rounded bg-black/80 px-4 py-2 text-white">
+        Skip intro
+      </a>
     </div>
   );
 }

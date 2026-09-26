@@ -14,14 +14,13 @@
       ],
       "destination": "https://www.experiailabs.com/:path*",
       "permanent": true
-    },
-    {
-      "source": "/home",
-      "destination": "/",
-      "permanent": true
     }
   ],
   "rewrites": [
+    {
+      "source": "/home",
+      "destination": "/home/index.html"
+    },
     {
       "source": "/about",
       "destination": "/about/index.html"

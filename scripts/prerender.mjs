@@ -2,7 +2,7 @@ import { createServer } from 'vite';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 
-const routes = ['/', '/about', '/capabilities', '/ventures', '/contact', '/team', '/ai-experience-design', '/government-services', '/404'];
+const routes = ['/', '/home', '/about', '/capabilities', '/ventures', '/contact', '/team', '/ai-experience-design', '/government-services', '/404'];
 const output = path.resolve('client/dist');
 const template = await readFile(path.join(output, 'index.html'), 'utf8');
 const server = await createServer({ server: { middlewareMode: true, hmr: false, ws: false }, appType: 'custom' });
