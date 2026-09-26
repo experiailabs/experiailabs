@@ -70,7 +70,7 @@ export default function GovernmentPublicServices() {
       <div className="section-divider" />
 
       {/* 90-Day Pilot Phases */}
-      <section className="py-16 md:py-20 bg-card/30">
+      <section id="90-day-pilot" className="scroll-mt-24 py-16 md:py-20 bg-card/30">
         <div className="container max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold font-mono text-foreground mb-10 text-center">
             A 90-Day Pilot, Not a Multi-Year Commitment

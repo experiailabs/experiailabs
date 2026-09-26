@@ -26,9 +26,9 @@ const SITE_URL = "https://www.experiailabs.com";
  */
 const seoByPath: Record<string, { title: string; description: string; noindex?: boolean }> = {
   "/": {
-    title: "AI Experience Design for Government Services",
+    title: "AI Experience Design for Government and Enterprise | ExperiAI Labs",
     description:
-      "ExperiAI Labs designs public-sector digital services people actually finish — built with intelligent automation and personalisation at scale.",
+      "ExperiAI Labs designs AI-powered digital services that citizens and customers actually finish, proven in a 90-day pilot measured on completion.",
   },
   "/about": {
     title: "About ExperiAI Labs",

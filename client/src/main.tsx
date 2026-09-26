@@ -27,6 +27,10 @@ function AnchorHandler() {
 
       const href = anchor.getAttribute("href");
       if (!href) return;
+      // Let the browser navigate to fragment targets in the prerendered HTML.
+      if (href.includes("#") || e.defaultPrevented || e.button !== 0 ||
+          e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
+          anchor.target === "_blank" || anchor.hasAttribute("download")) return;
 
       // Only handle internal SPA links
       if (href.startsWith("/") && !href.startsWith("//")) {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
-import ShinyText from './SplitText';
 import CountUp from './CountUp';
 
 /**
@@ -59,47 +58,24 @@ export default function HeroSection() {
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-3xl">
-          {/* Subheading with Badge */}
-          <div className="mb-6 md:mb-8 inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-primary/10 border border-primary/30 rounded-full">
-            
-            <span className="text-xs md:text-sm font-semibold text-primary">
-              
-
-<ShinyText
-  text="✨ AI-Powered Experience Innovation"
-  speed={2}
-  delay={0}
-  color="#FF9F1C"
-  shineColor="#ffffff"
-  spread={120}
-  direction="left"
-  yoyo={false}
-  pauseOnHover={false}
-  disabled={false}
-/></span>
+          <div className="mb-6 md:mb-8 inline-flex px-4 py-2 bg-primary/10 border border-primary/30 rounded-full">
+            <span className="text-sm font-semibold text-primary">AI experience design for governments and enterprises</span>
           </div>
-
-          {/* Main Headline - SEO Optimized */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-mono text-foreground leading-tight mb-4 md:mb-6">
-            Designing <span className="text-primary"> 
-              <ShinyText
-  text="Intelligent"
-  speed={2}
-  delay={0}
-  color="#FF9F1C"
-  shineColor="#ffffff"
-  spread={120}
-  direction="left"
-  yoyo={false}
-  pauseOnHover={false}
-  disabled={false}
-/></span> Experiences at Scale
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-mono text-foreground leading-tight mb-6">
+            Digital services people actually finish.
           </h1>
-
-          {/* Subheading with Keywords */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed max-w-2xl">
-            We specialize in AI experience design and personalisation at scale. Our intelligent automation solutions embed AI-driven innovation into every customer touchpoint, delivering AI-driven customer experiences that captivate users and drive measurable business results.
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
+            We use AI and experience design to remove the steps where citizens and customers give up. We prove the result in a 90-day pilot, measured on completion, not clicks.
           </p>
+          <div className="mb-10">
+            <a href="/government-services#90-day-pilot" className="neon-button inline-flex items-center justify-center gap-2">
+              See how a 90-day pilot works <ArrowRight size={18} aria-hidden="true" />
+            </a>
+            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              <a href="/government-services" className="text-foreground underline underline-offset-4 hover:text-primary">For government</a>
+              <a href="/capabilities" className="text-foreground underline underline-offset-4 hover:text-primary">For business</a>
+            </div>
+          </div>
 
           {/* Key Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
@@ -139,41 +115,6 @@ export default function HeroSection() {
 />%</div>
               <p className="text-xs md:text-sm text-muted-foreground">AI-Focused</p>
             </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-            <a
-              href="/capabilities"
-              className="
-    neon-button relative overflow-hidden
-    inline-flex items-center justify-center gap-2
-    text-sm md:text-base px-4 md:px-6 py-2 md:py-3
-    group transition-all duration-300 hover:bg-none
-  "
-            >
-              <span className="relative z-10">Explore AI Solutions</span>
-
-              <ArrowRight
-                size={16}
-                className="relative z-10 md:w-5 md:h-5 transition-transform group-hover:translate-x-1"
-              />
-
-              {/* Hover overlay */}
-              <span
-                className="
-    absolute inset-0 bg-primary/70
-    scale-x-0 opacity-0 origin-left
-    transition-all duration-400 z-40
-    group-hover:scale-x-100 group-hover:opacity-100
-  "
-              />
-
-            </a>
-
-            <a href="/contact" className="px-4 md:px-6 py-2 md:py-3 font-semibold border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300 inline-flex items-center justify-center gap-2 rounded-sm text-sm md:text-base group">
-              Start Your Project <ArrowRight size={16} className="md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
           </div>
 
           {/* Trust Indicators */}
