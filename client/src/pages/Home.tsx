@@ -55,7 +55,7 @@ export default function Home() {
             Why Build with <span className="text-primary">ExperiAI Labs</span>?
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-12 md:mb-16 text-center max-w-3xl mx-auto">
-            We help businesses make their digital services easier to use. Our team combines research, design and engineering to help customers find what they need and complete their tasks.
+            We help governments and businesses make their digital services easier to finish.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

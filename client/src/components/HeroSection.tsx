@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
-import CountUp from './CountUp';
 
 /**
  * Hero Section Component - Animated with geometric shapes and neon effects
@@ -68,64 +67,24 @@ export default function HeroSection() {
             We use AI and experience design to remove the steps where citizens and customers give up. We prove the result in a 90-day pilot, measured on completion, not clicks.
           </p>
           <div className="mb-10">
-            <a href="/government-services#90-day-pilot" className="neon-button inline-flex items-center justify-center gap-2">
+            <a href="/government-services#90-day-pilot" className="neon-button inline-flex w-full sm:w-auto items-center justify-center gap-2 text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               See how a 90-day pilot works <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-              <a href="/government-services" className="text-foreground underline underline-offset-4 hover:text-primary">For government</a>
-              <a href="/capabilities" className="text-foreground underline underline-offset-4 hover:text-primary">For business</a>
+            <div className="mt-4 flex flex-col sm:flex-row gap-3 text-sm">
+              <a href="/government-services" className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-primary/50 bg-background/70 px-5 py-3 font-semibold text-foreground transition-colors hover:border-primary hover:bg-primary/10 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+                For government <ArrowRight size={16} aria-hidden="true" className="shrink-0 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" />
+              </a>
+              <a href="/capabilities" className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-primary/50 bg-background/70 px-5 py-3 font-semibold text-foreground transition-colors hover:border-primary hover:bg-primary/10 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+                For business <ArrowRight size={16} aria-hidden="true" className="shrink-0 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" />
+              </a>
             </div>
           </div>
 
-          {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
-            <div className="p-3 md:p-4 bg-card/50 border border-border rounded-sm backdrop-blur-sm">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1"><CountUp
-  from={0}
-  to={2}
-  separator=","
-  direction="up"
-  duration={1}
-  className="count-up-text"
-  
-/></div>
-              <p className="text-xs md:text-sm text-muted-foreground">Flagship Projects</p>
-            </div>
-            <div className="p-3 md:p-4 bg-card/50 border border-border rounded-sm backdrop-blur-sm">
-              <div className="text-2xl md:text-3xl font-bold text-accent mb-1"><CountUp
-  from={0}
-  to={9}
-  separator=","
-  direction="up"
-  duration={2}
-  className="count-up-text"
- 
-/>+</div>
-              <p className="text-xs md:text-sm text-muted-foreground">Target Markets</p>
-            </div>
-            <div className="p-3 md:p-4 bg-card/50 border border-border rounded-sm backdrop-blur-sm">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1"><CountUp
-  from={0}
-  to={100}
-  separator=","
-  direction="up"
-  duration={5}
-  className="count-up-text"
-  
-/>%</div>
-              <p className="text-xs md:text-sm text-muted-foreground">AI-Focused</p>
-            </div>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-10 md:mt-12 pt-8 md:pt-10 border-t border-border/50">
-            <p className="text-xs md:text-sm text-muted-foreground mb-3 font-semibold">Trusted by innovative companies</p>
-            <div className="flex flex-wrap gap-4 md:gap-6">
-              <div className="text-xs md:text-sm text-muted-foreground">✓ Enterprise-Grade AI</div>
-              <div className="text-xs md:text-sm text-muted-foreground">✓ Proven Track Record</div>
-              <div className="text-xs md:text-sm text-muted-foreground">✓ Global Reach</div>
-            </div>
-          </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-border/50 text-foreground">
+            <li>90-day pilot</li>
+            <li>Measured on completion rate</li>
+            <li>Data stays in your jurisdiction</li>
+          </ul>
         </div>
       </div>
     </section>
