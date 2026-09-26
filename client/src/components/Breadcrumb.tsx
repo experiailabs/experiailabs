@@ -17,6 +17,7 @@ export default function Breadcrumb() {
   // Define breadcrumb paths for each route
   const breadcrumbMap: Record<string, BreadcrumbItem[]> = {
     '/': [{ label: 'Home', href: '/' }],
+    '/government-services': [{ label: 'Home', href: '/home' }, { label: 'Government & Public Services', href: '/government-services' }],
     '/about': [
       { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },

@@ -1,3 +1,7 @@
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
+import StructuredData, { governmentServiceSchema } from '@/components/StructuredData';
 import { ArrowRight, ShieldCheck, Landmark, Workflow, Globe2 } from 'lucide-react';
 
 /**
@@ -20,6 +24,9 @@ import { ArrowRight, ShieldCheck, Landmark, Workflow, Globe2 } from 'lucide-reac
 export default function GovernmentPublicServices() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <StructuredData schema={governmentServiceSchema} />
+      <Header />
+      <Breadcrumb />
       {/* Hero */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-20">
         <div className="container max-w-4xl">
@@ -188,6 +195,7 @@ export default function GovernmentPublicServices() {
           </a>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

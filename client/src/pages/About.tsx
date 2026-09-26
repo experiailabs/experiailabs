@@ -32,7 +32,7 @@ export default function About() {
             About <span className="text-primary">ExperiAI Labs</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl">
-            We're pioneers in AI experience design, building intelligent automation solutions that deliver personalisation at scale and transform how businesses create AI-driven customer experiences.
+            We bring design and AI engineering together to make digital services easier to use. Our work spans customer journeys, relevant recommendations and routine task automation.
           </p>
         </div>
       </section>
@@ -47,13 +47,13 @@ export default function About() {
             <div data-aos="fade-right" data-aos-delay="200">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono text-foreground mb-6">Our Mission</h2>
               <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
-                At ExperiAI Labs, we believe that technology should enhance human connection, not replace it. Our mission is to pioneer adaptive experience design that makes everyday interactions more meaningful, efficient, and enjoyable.
+                Our aim is to help people get things done with less effort. We start by understanding their needs, then design technology that supports them.
               </p>
               <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
-                We specialize in building AI-assisted workflows systems that deliver tailored digital experiences. Whether it's travel, entertainment, or emerging markets, we create AI-driven customer experiences that captivate users and drive measurable business results.
+                We build systems that automate routine work and tailor content to individual needs. Our projects explore how these tools can support people in travel, entertainment and other services.
               </p>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                Our approach combines cutting-edge AI technology with deep human-centered design principles. We don't just build products—we craft experiences that feel intuitive, responsive, and deeply personal.
+                We combine user research with technical development, testing whether each feature helps people complete the task they came to do.
               </p>
             </div>
             <div className="p-6 md:p-8 bg-card border border-border rounded-sm" data-aos="fade-left" data-aos-delay="400">
@@ -62,21 +62,21 @@ export default function About() {
                 <li className="flex gap-3">
                   <span className="text-primary font-bold text-lg">→</span>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">adaptive experience design</p>
+                    <p className="font-semibold text-foreground mb-1">Make Services Easier to Use</p>
                     <p className="text-xs md:text-sm text-muted-foreground">Creating interfaces and interactions that feel naturally intelligent</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-accent font-bold text-lg">→</span>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">tailored digital experiences</p>
-                    <p className="text-xs md:text-sm text-muted-foreground">Delivering unique experiences to millions simultaneously</p>
+                    <p className="font-semibold text-foreground mb-1">Offer Relevant Choices</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Adapting content and recommendations to individual needs</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-bold text-lg">→</span>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">AI-assisted workflows</p>
+                    <p className="font-semibold text-foreground mb-1">Reduce Repetitive Work</p>
                     <p className="text-xs md:text-sm text-muted-foreground">Building systems that work smarter and adapt in real-time</p>
                   </div>
                 </li>
@@ -107,19 +107,19 @@ export default function About() {
             {[
               {
                 title: 'Human-Centered Innovation',
-                description: 'We design AI systems that enhance human capabilities. Our adaptive experience design philosophy puts users first, creating intuitive systems that feel natural and empowering.',
+                description: 'We involve users in design decisions and build tools that help them work with confidence.',
               },
               {
-                title: 'AI-assisted workflows',
-                description: 'We believe in building systems that work smarter. Our AI-assisted workflows solutions reduce friction, increase efficiency, and create seamless experiences at every touchpoint.',
+                title: 'Practical Automation',
+                description: 'We automate repetitive tasks so teams can spend more time on work that needs their judgement.',
               },
               {
-                title: 'tailored digital experiences',
-                description: 'Mass personalisation is not a contradiction. We leverage AI to deliver unique, relevant experiences to millions of users without sacrificing quality or authenticity.',
+                title: 'Individual Needs',
+                description: 'We use customer preferences and context to make recommendations useful, and test whether they meet individual needs.',
               },
               {
                 title: 'Global Perspective',
-                description: 'We understand that responsive customer journeys must adapt to different cultures and markets. Our solutions are designed for global reach with local relevance.',
+                description: 'We account for local language, culture and service expectations when designing for different markets.',
               },
             ].map((value, idx) => (
               <div key={idx} className="p-6 md:p-8 bg-background border border-border rounded-sm hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02]"
@@ -140,7 +140,7 @@ export default function About() {
       <section className="py-16 md:py-20 lg:py-32">
         <div className="container">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-mono text-foreground mb-12 md:mb-16 text-center">
-            Our Expertise in <span className="text-primary">adaptive experience design</span>
+            The Skills We <span className="text-primary">Bring to Your Project</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -211,7 +211,7 @@ export default function About() {
             Let's Build Something Extraordinary Together
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
-            Whether you need adaptive experience design, tailored digital experiences, or AI-assisted workflows, we're ready to help you create responsive customer journeys that drive real business impact.
+            Tell us about your service, your users and the problem you want to solve. We will help you identify where design and AI could make a useful difference.
           </p>
           <a href="/contact" className="neon-button inline-flex items-center justify-center gap-2 text-sm md:text-base px-4 md:px-6 py-2 md:py-3">
             Get in Touch <ArrowRight size={16} className="md:w-5 md:h-5" />

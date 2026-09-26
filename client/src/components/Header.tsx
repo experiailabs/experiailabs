@@ -13,6 +13,7 @@ export default function Header() {
   const navLinks = [
     { label: 'About', href: '/about' },
     { label: 'Capabilities', href: '/capabilities' },
+    { label: 'Government', href: '/government-services' },
     { label: 'Ventures', href: '/ventures' },
     { label: 'Team', href: '/team' },
     { label: 'Contact', href: '/contact' },
@@ -31,15 +32,16 @@ export default function Header() {
           onClick={() => handleNavClick('/')}
           className="text-lg md:text-2xl font-bold font-mono text-primary hover:text-accent transition-colors cursor-pointer bg-none border-none p-0"
         >
-          <img src="/images/experiai-labs-logo-transparent.png" alt="ExperiAI Labs Logo" className="h-6 md:h-16" />
+          <img src="/images/experiai-labs-logo-transparent.png" alt="ExperiAI Labs Logo" className="h-14 w-auto lg:h-16" />
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-6 lg:gap-8 items-center">
+        <div className="hidden lg:flex gap-5 xl:gap-8 items-center">
           {navLinks.map((link) => (
-            <button
+            <a
+              href={link.href}
               key={link.href}
-              onClick={() => handleNavClick(link.href)}
+              onClick={() => setIsOpen(false)}
               className="
     relative
     text-xs md:text-sm font-semibold text-foreground
@@ -53,7 +55,7 @@ export default function Header() {
   "
             >
               {link.label}
-            </button>
+            </a>
 
           ))}
           <button
@@ -66,9 +68,11 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+          className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle mobile menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -76,16 +80,17 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-card">
+        <div id="mobile-navigation" className="lg:hidden border-t border-border bg-card">
           <div className="container py-3 flex flex-col gap-2">
             {navLinks.map((link) => (
-              <button
+              <a
+                href={link.href}
                 key={link.href}
-                onClick={() => handleNavClick(link.href)}
+                onClick={() => setIsOpen(false)}
                 className="text-sm font-semibold text-foreground hover:text-primary hover:bg-background/50 transition-all duration-300 block py-2 px-3 text-left cursor-pointer bg-none border-none rounded-sm"
               >
                 {link.label}
-              </button>
+              </a>
             ))}
             <button
               onClick={() => handleNavClick('/contact')}

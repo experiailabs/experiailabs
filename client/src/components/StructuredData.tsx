@@ -117,9 +117,9 @@ export const serviceSchema = {
     "@type": "Organization",
     "name": "ExperiAI Labs",
     "url": "https://www.experiailabs.com",
-    "logo": "https://www.experiailabs.com/logo.png",
+    "logo": "https://www.experiailabs.com/images/experiai-labs-logo-transparent.png",
     "sameAs": [
-      "https://linkedin.com/company/experiai-labs"
+      "https://www.linkedin.com/company/experiailabs/"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -188,7 +188,7 @@ export const linkedinCompanySchema = {
   "@type": "Organization",
   "name": "ExperiAI Labs",
   "url": "https://www.experiailabs.com",
-  "logo": "https://www.experiailabs.com/logo.png",
+  "logo": "https://www.experiailabs.com/images/experiai-labs-logo-transparent.png",
   "description": "ExperiAI Labs specializes in AI experience design, personalisation at scale, and intelligent automation solutions. We create transformative AI-driven customer experiences for enterprises across UAE, Saudi Arabia, Australia, and emerging markets.",
   "foundingDate": "2024",
   "contactPoint": {
@@ -202,8 +202,7 @@ export const linkedinCompanySchema = {
     "@type": "PostalAddress",
     "streetAddress": "Al Hulaila, Al Hulaila Industrial Zone-FZ",
     "addressLocality": "Ras Al Khaimah",
-    "addressCountry": "AE",
-    "postalCode": "00000"
+    "addressCountry": "AE"
   },
   "sameAs": [
     "https://www.linkedin.com/company/experiailabs/",
@@ -303,4 +302,17 @@ export const venturesSchema = {
       }
     }
   ]
+};
+
+// Describes the service offered; does not imply government affiliation.
+export const governmentServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.experiailabs.com/government-services#service",
+  name: "Government & Public Services",
+  serviceType: "Digital public service design",
+  url: "https://www.experiailabs.com/government-services",
+  description: "Citizen service journey design, pilot delivery, data residency planning and governance for government programmes.",
+  provider: linkedinCompanySchema,
+  audience: { "@type": "Audience", audienceType: "Government and public-sector organisations" },
 };

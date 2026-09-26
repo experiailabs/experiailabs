@@ -96,9 +96,9 @@ export default function Capabilities() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right" data-aos-delay="200">
-              <h2 className="text-4xl font-bold font-mono text-foreground mb-6">tailored digital experiences</h2>
+              <h2 className="text-4xl font-bold font-mono text-foreground mb-6">Content That Fits Each Customer</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Move beyond basic segmentation. Our AI-assisted workflows systems create truly individualized experiences for millions of users simultaneously, adapting to preferences, behavior, and context in real-time.
+                We use preferences, behaviour and context to tailor content and recommendations, then test whether those choices help customers complete their tasks.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex gap-3">

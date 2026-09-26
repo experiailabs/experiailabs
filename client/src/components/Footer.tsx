@@ -50,6 +50,7 @@ export default function Footer() {
           <div>
             <h5 className="text-xs md:text-sm font-semibold text-foreground mb-3 md:mb-4">Company</h5>
             <ul className="space-y-2">
+              <li><a href="/government-services" className="text-sm text-muted-foreground hover:text-primary">Government &amp; Public Services</a></li>
               <li>
                 <a
                   href="/about"
@@ -76,7 +77,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/Team"
+                  href="/team"
                   className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-all duration-300"
                 >
                   Team

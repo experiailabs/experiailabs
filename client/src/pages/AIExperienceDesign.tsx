@@ -64,11 +64,11 @@ export default function AIExperienceDesign() {
           <h2 className="text-2xl md:text-3xl font-bold font-mono text-foreground mb-8">Table of Contents</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { num: 1, title: 'What is adaptive experience design?', id: 'what-is' },
+              { num: 1, title: 'What Makes an Experience Adaptive?', id: 'what-is' },
               { num: 2, title: 'The Evolution of Customer Experience', id: 'evolution' },
-              { num: 3, title: 'Core Principles of adaptive experience design', id: 'principles' },
-              { num: 4, title: 'tailored digital experiences', id: 'personalisation' },
-              { num: 5, title: 'AI-assisted workflows in Practice', id: 'automation' },
+              { num: 3, title: 'Core Design Principles', id: 'principles' },
+              { num: 4, title: 'Making Content Relevant', id: 'personalisation' },
+              { num: 5, title: 'Automation in Practice', id: 'automation' },
               { num: 6, title: 'AI-Driven Customer Experiences', id: 'experiences' },
               { num: 7, title: 'Implementation Strategy', id: 'implementation' },
               { num: 8, title: 'Measuring Success & ROI', id: 'measurement' },
@@ -93,9 +93,9 @@ export default function AIExperienceDesign() {
         <div className="container max-w-4xl">
           {/* Section 1 */}
           <div id="what-is" className="mb-16 md:mb-20 scroll-mt-20">
-            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">1. What is adaptive experience design?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">1. What Makes an Experience Adaptive?</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-              adaptive experience design is the practice of creating intelligent, adaptive interfaces and interactions that leverage artificial intelligence to deliver personalised, contextually relevant experiences to users. It represents the intersection of user experience design, machine learning, and behavioral psychology—creating systems that feel intuitive, responsive, and deeply personal.
+              Adaptive experience design is the practice of creating intelligent, adaptive interfaces and interactions that leverage artificial intelligence to deliver personalised, contextually relevant experiences to users. It represents the intersection of user experience design, machine learning, and behavioral psychology—creating systems that feel intuitive, responsive, and deeply personal.
             </p>
             <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
               Unlike traditional UX design, which focuses on static interfaces and predetermined user flows, adaptive experience design creates dynamic systems that learn from user behavior, adapt in real-time, and anticipate needs before users articulate them. This approach enables tailored digital experiences—delivering unique experiences to millions of users simultaneously without sacrificing quality or authenticity.
@@ -131,7 +131,7 @@ export default function AIExperienceDesign() {
 
           {/* Section 3 */}
           <div id="principles" className="mb-16 md:mb-20 scroll-mt-20">
-            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">3. Core Principles of adaptive experience design</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">3. Core Design Principles</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
               Effective adaptive experience design rests on five foundational principles that guide all decisions and implementations.
             </p>
@@ -155,7 +155,7 @@ export default function AIExperienceDesign() {
                 },
                 {
                   title: 'Continuous Learning',
-                  desc: 'AI systems should improve over time through user interactions and feedback. tailored digital experiences means every interaction teaches the system, making experiences better for all users.',
+                  desc: 'Use feedback and observed outcomes to evaluate the system and improve recommendations over time.',
                 },
               ].map((principle, idx) => (
                 <div key={idx} className="p-6 md:p-8 bg-card border border-border rounded-sm">
@@ -173,15 +173,15 @@ export default function AIExperienceDesign() {
 
           {/* Section 4 */}
           <div id="personalisation" className="mb-16 md:mb-20 scroll-mt-20">
-            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">4. tailored digital experiences</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">4. Making Content Relevant</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-              tailored digital experiences is one of the most powerful applications of adaptive experience design. Historically, personalisation was limited to large enterprises with massive data science teams. Today, through AI-assisted workflows and machine learning, any organization can deliver personalised experiences to millions of users simultaneously.
+              Personalisation helps people find content and services relevant to their needs. Start with a specific use case and enough reliable data to test whether tailored recommendations improve the experience.
             </p>
             <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-              The key to effective personalisation is understanding that it's not about collecting more data—it's about using data intelligently. responsive customer journeys leverage behavioral signals, contextual information, and predictive analytics to deliver the right content, at the right time, through the right channel.
+              The key to effective personalisation is understanding that it's not about collecting more data—it's about using data intelligently. These systems use behavioural signals, contextual information, and predictive analytics to deliver the right content, at the right time, through the right channel.
             </p>
             <div className="p-6 md:p-8 bg-primary/10 border border-primary/30 rounded-sm my-8">
-              <h3 className="text-xl font-bold font-mono text-foreground mb-4">tailored digital experiences in Action</h3>
+              <h3 className="text-xl font-bold font-mono text-foreground mb-4">Personalisation in Practice</h3>
               <ul className="space-y-3">
                 {[
                   'Dynamic content that changes based on user behavior and preferences',
@@ -201,12 +201,12 @@ export default function AIExperienceDesign() {
 
           {/* Section 5 */}
           <div id="automation" className="mb-16 md:mb-20 scroll-mt-20">
-            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">5. AI-assisted workflows in Practice</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">5. Automation in Practice</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-              AI-assisted workflows goes beyond simple task automation. It combines process automation with AI decision-making to create systems that handle complex workflows intelligently. Rather than following rigid rules, these systems learn from data, adapt to exceptions, and continuously improve their performance.
+              AI can support tasks that involve interpreting information, such as classifying a request or suggesting a response. Define how the system handles uncertainty and when a person needs to review its output.
             </p>
             <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-              In the context of adaptive experience design, AI-assisted workflows eliminates friction from customer journeys. It automates routine tasks, routes complex issues intelligently, and ensures users always get the most appropriate response or recommendation.
+              Automation can reduce repetitive steps, route requests to the right team and help people find answers. Test these changes against the existing service before expanding their use.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
@@ -245,9 +245,9 @@ export default function AIExperienceDesign() {
 
           {/* Section 6 */}
           <div id="experiences" className="mb-16 md:mb-20 scroll-mt-20">
-            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">6. responsive customer journeys</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-mono text-foreground mb-6">6. Designing the Whole Journey</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-              responsive customer journeys represent the ultimate application of these principles. They're not just about better recommendations or faster response times—they're about creating moments of delight that customers remember and share.
+              Responsive customer journeys represent the ultimate application of these principles. They're not just about better recommendations or faster response times—they're about creating moments of delight that customers remember and share.
             </p>
             <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
               Consider how travel platforms like Silly Suitcase use adaptive experience design to transform vacation planning. Rather than forcing users to search through thousands of options, intelligent systems understand their preferences, budget, travel style, and past experiences to surface exactly what they need. The experience feels personalised, effortless, and surprising—in the best way.
@@ -355,7 +355,7 @@ export default function AIExperienceDesign() {
           <div className="p-6 md:p-8 bg-primary/10 border border-primary/30 rounded-sm mt-16">
             <h2 className="text-2xl md:text-3xl font-bold font-mono text-foreground mb-4">The Future is AI-Driven</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed">
-              adaptive experience design is no longer a competitive advantage—it's becoming table stakes. Organizations that master tailored digital experiences, implement AI-assisted workflows, and create responsive customer journeys will capture disproportionate value in their markets.
+              Adaptive experience design is no longer a competitive advantage—it's becoming table stakes. Organizations that master tailored digital experiences, implement AI-assisted workflows, and create responsive customer journeys will capture disproportionate value in their markets.
             </p>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               At ExperiAI Labs, we help organizations navigate this transformation. Whether you're just beginning your AI journey or looking to scale existing initiatives, we bring expertise, proven frameworks, and deep industry knowledge to help you succeed.
